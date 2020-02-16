@@ -16,3 +16,4 @@ def func():
     return [lambda x: i*x for i in range(5)]
 
 print([m(3) for m in func()])
+

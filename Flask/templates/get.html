@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+	</title>
+</head>
+<body>
+	<!-- <form method = "post" action = "/login"> -->
+	<form method = "post" action = {{url_for('login') }}>
+	<!-- action 的部分不寫死，以免之後app.route('url')調整，還要更動每個文件的action -->
+	<!-- 使用url_for('function name') 方法， function name 為該部由所裝飾器函數名稱 -->
+		<input type="test" name="username">
+		<button type = "submit">Submit</button>
+	</form>
+</body>
+</html>

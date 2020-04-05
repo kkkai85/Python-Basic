@@ -12,3 +12,7 @@ elif op == "/":
 	print(n1 / n2) 
 else: 
 	print("不支援的運算")
+
+a = 2
+b = 3
+print("a < b") if a < b else print("a > b")

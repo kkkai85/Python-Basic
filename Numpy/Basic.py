@@ -8,7 +8,7 @@ print('number of dim:',array.ndim)  # 维度
 # number of dim: 2
 
 print('shape :',array.shape)    # 行數與列數
-# shape : (2, 3)
+# shape : (2, 3) 
 
 print('size:',array.size)   # 元素個數
 # size: 6

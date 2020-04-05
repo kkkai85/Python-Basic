@@ -1,4 +1,5 @@
 # while 迴圈
+print("while 範例:")
 n = 1
 sum = 0
 while n <= 10:
@@ -7,7 +8,18 @@ while n <= 10:
 	n += 1
 print(sum)
 
+while True:
+	number = int(input('輸入數字：'))
+	print('輸入數為', '奇數' if number % 2 else '偶數')
+	if(input('繼續？（Yes/No）') == 'No'):
+		break
+
 # for 迴圈
+print("for 範例:")
+import sys
+for arg in sys.argv:
+	print(arg)
+
 for x in [3, 5, 1]:
 	print(x)
 
@@ -19,6 +31,13 @@ for x in range(5): # range(5) 相當於[0, 1, 2, 3, 4]
 
 for x in range(5, 10): # range(5, 10) 相當於[5, 6, 7, 8, 9]
 	print(x)
+
+for (x, y) in zip([1, 2, 3], [4, 5, 6]):
+	print(x + y)
+
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+file = [d for d in data if d < 5]
+print("file", file)
 
 print("break 範例:")
 # break

@@ -8,6 +8,13 @@ def square():
 
     print(i)
 
+def square2(num):
+    for i in range(num):
+        i += i**2
+
+    return i
+
+
 if __name__ == '__main__':
     # 使用多進程multiprocessing
     t1_pro = time.time()
@@ -19,6 +26,15 @@ if __name__ == '__main__':
     pro2.join()
     t2_pro = time.time()
     print("multiprocessing:" + str(t2_pro - t1_pro))
+
+
+    # 使用多進程map方法，用於需要迭代運算的值
+    t3_pro = time.time()
+    pl = mp.Pool(processes = 4)
+    pro3 = pl.map(square2, (10000000, 10000000,))
+    print(pro3)
+    t4_pro = time.time()
+    print("multiprocessing Pool:" + str(t4_pro - t3_pro))    
 
     # 使用多線程threading，thread 也可以使用multiprocessing 的Queue
     t1_thr = time.time()

@@ -23,6 +23,18 @@ chrome_options.add_argument("--headless")
 driver = webdriver.Chrome('D:\Selenium Driver\chromedriver', chrome_options = chrome_options)
 """
 
+# 設定偽造身份進行網路爬蟲
+"""
+user_agent = "Mozilla/5.0 (Windows NT 10.0; WOW64; rv:53.0) Gecko/20100101 Firefox/53.0"
+opts.add_argument("user-agent={}".format(user_agent))
+"""
+
+# 設定代理伺服器
+"""
+proxy = "socks5://localhost:9050"
+opts.add_argument("--proxy-server={}".format(proxy))  # 讓 selenium透過 tor訪問 internet
+"""
+
 # 控制滑鼠滾輪移動
 """
 透過execute_script()執行js 代碼，控制網頁行動。

@@ -7,12 +7,12 @@ db = connect.Basic
 coll = db.Basic_coll
 
 # 修改
-value = {'name':'kai'}
-newvalue = {"$set":{'name':'new kai'}}
+value = {'name' : 'kai'}
+newvalue = {"$set" : {'name':'new kai'}}
 
 print("修改一筆資料:")
 # 修改一筆資料用update_one() 方法，但只能匹配到第一條紀錄
-coll.update_one(value, newvalue)
+coll.update_one(value, newvalue, True)
 
 
 

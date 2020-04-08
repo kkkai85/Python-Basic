@@ -22,13 +22,13 @@ print("格式化字串: " + format_string)
 True
 False
 
-# 列表List[] 中括號，有順序、可動的列表
-[3, 4, 5] 
-["Hello", "List"]
-
 # 列表Tuple() 小括號，有順序、不可動的列表
 (3, 4, 5)
 ("Hello", "Tuple")
+
+# 列表List[] 中括號，有順序、可動的列表
+[3, 4, 5] 
+["Hello", "List"]
 
 # 集合Set{} 大括號，集合，無序、元素不重複
 {3, 4, 5}
